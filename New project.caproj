@@ -12,7 +12,9 @@
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -40,6 +42,11 @@
     <object-folder>
         <object-type name="Sprite" sid="913152049435478">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="499937717765361">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268859234554760" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
