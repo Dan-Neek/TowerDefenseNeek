@@ -4,5 +4,11 @@
     <name>Code</name>
     <events>
         <event-group description="Estos son los eventos principales del juego" sid="722699098184943" title="Eventos del Sistema " />
+        <event-block sid="554418330500688">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="772967182356483" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>
