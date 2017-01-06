@@ -2,5 +2,7 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Code</name>
-    <events />
+    <events>
+        <event-group description="Estos son los eventos principales del juego" sid="722699098184943" title="Eventos del Sistema " />
+    </events>
 </c2eventsheet>
