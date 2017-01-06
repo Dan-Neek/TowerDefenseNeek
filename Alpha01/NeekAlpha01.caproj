@@ -13,7 +13,9 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -103,6 +105,79 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="646917001548248" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.517241" original-source="C:\Users\mario.gonzalezs\Desktop\Daniel\Dany\Neek\Graphics\Alpha01\Arrow.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="L_inventario" sid="172050731556816">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="157638324984665" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500726" original-source="C:\Users\Jack\Documents\TowerDefenseNeek\Alpha01\Animations\Menus\L_menu.png">
+                        <collision-poly>
+                            <point x="0.000968992" y="0.00145138" />
+                            <point x="0.999031" y="0.00145138" />
+                            <point x="0.999031" y="0.998549" />
+                            <point x="0.000968992" y="0.998549" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="547114142512445">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="195298548457312">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="340301912823064" speed="5">
+                    <frame duration="1" hotspotX="0.50137" hotspotY="0.5" original-source="C:\Users\Jack\Documents\TowerDefenseNeek\Alpha01\Animations\Sprite7\Default\000.png">
+                        <collision-poly>
+                            <point x="0.282192" y="0.312121" />
+                            <point x="0.49863" y="0.178788" />
+                            <point x="0.857534" y="0.157576" />
+                            <point x="0.827397" y="0.5" />
+                            <point x="0.789041" y="0.766667" />
+                            <point x="0.49863" y="0.824242" />
+                            <point x="0.158904" y="0.824242" />
+                            <point x="0.126027" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="b_inventario" sid="407201414959148">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="724165378380782" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jack\Documents\TowerDefenseNeek\Alpha01\Animations\Buttons\b_inventario.png">
+                        <collision-poly>
+                            <point x="0.146667" y="0.146667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.853333" y="0.146667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853333" y="0.853333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146667" y="0.853333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Slot" sid="839841932538657">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565917528934260" speed="5">
+                    <frame duration="1" hotspotX="0.502058" hotspotY="0.502058" original-source="C:\Users\Jack\Documents\TowerDefenseNeek\Alpha01\Animations\Menus\Slot.png">
+                        <collision-poly>
+                            <point x="0.00823045" y="0.00823045" />
+                            <point x="0.99177" y="0.00823045" />
+                            <point x="0.99177" y="0.99177" />
+                            <point x="0.00823045" y="0.99177" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

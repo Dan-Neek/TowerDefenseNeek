@@ -3,7 +3,84 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Code</name>
     <events>
-        <event-group description="Estos son los eventos principales del juego" sid="722699098184943" title="Eventos del Sistema " />
+        <variable constant="0" name="Control_Inventario" sid="490061167551598" static="0" type="number">0</variable>
+        <event-group description="Estos son los eventos principales del juego" sid="722699098184943" title="Eventos del Sistema ">
+            <sub-events>
+                <event-group description="" sid="935124746649750" title="Inventario de Armas">
+                    <sub-events>
+                        <event-block sid="264724725498388">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="905547309166764" type="System">
+                                    <param id="0" name="Variable">Control_Inventario</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="467277401789972" type="System">
+                                    <param id="0" name="Layer">&quot;Inventario&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="497361260338533" type="b_inventario">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="401801301237381">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="919182951887653" type="System">
+                                    <param id="0" name="Variable">Control_Inventario</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="276569234860435" type="System">
+                                    <param id="0" name="Layer">&quot;Inventario&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="746996998158716" type="b_inventario">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="144870348513484">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="257413889822171" type="Touch">
+                                    <param id="0" name="Object">b_inventario</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="868219112140385" type="System">
+                                    <param id="0" name="Variable">Control_Inventario</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="178294702518205">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="645604571506293" type="Sprite7">
+                                    <param id="0" name="Object">Slot</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="442080103441689" type="Sprite7">
+                                    <param id="0" name="Object">Slot</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="968610669930234" type="Sprite7">
+                                    <param id="0" name="Layer">&quot;Background&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="691383348586313" type="System">
+                                    <param id="0" name="Variable">Control_Inventario</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
         <event-block sid="554418330500688">
             <conditions>
                 <condition id="-1" name="Every tick" sid="772967182356483" type="System" />
