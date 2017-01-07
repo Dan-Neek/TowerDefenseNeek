@@ -28,15 +28,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/background/" />
+        <folder expanded="1" path="animation-folder/suelo/" />
+        <folder expanded="1" path="animation-folder/TorreHeroe/" />
         <folder expanded="1" path="animation-folder/Heroe/" />
         <folder expanded="1" path="animation-folder/Arco/" />
         <folder expanded="1" path="animation-folder/Flechas/" />
         <folder expanded="1" path="animation-folder/L_inventario/" />
-        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/cañon/" />
         <folder expanded="1" path="animation-folder/b_inventario/" />
         <folder expanded="1" path="animation-folder/Slot/" />
+        <folder expanded="1" path="animation-folder/enemy/" />
+        <folder expanded="1" path="animation-folder/barra/" />
+        <folder expanded="1" path="animation-folder/hitPoints/" />
+        <folder expanded="1" path="animation-folder/gameOver/" />
     </folders-expanded>
 </c2uistate>

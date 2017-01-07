@@ -17,6 +17,8 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -43,7 +45,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Sprite" sid="467660974377648">
+        <object-type name="background" sid="467660974377648">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184460702187363" speed="5">
@@ -51,8 +53,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="716690006077516">
+        <object-type name="suelo" sid="716690006077516">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="502428279832528">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878411229996651" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\mario.gonzalezs\Desktop\Daniel\Dany\Neek\Graphics\Alpha01\Ground_Alpha01.png">
@@ -67,7 +74,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="859125382149417">
+        <object-type name="TorreHeroe" sid="859125382149417">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="492366594415160" speed="5">
@@ -132,7 +139,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite7" sid="547114142512445">
+        <object-type name="cañon" sid="547114142512445">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="DragDrop" sid="195298548457312">
@@ -192,6 +199,81 @@
         </object-type>
         <object-type name="arrowTxt" sid="172872252666099">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="enemy" sid="407705280397988">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="849753365580135">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876798504920491" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Toshiba\Documents\Neek Studio\enemie.png">
+                        <collision-poly>
+                            <point x="0.24" y="0.24" />
+                            <point x="0.5" y="0.21" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.96" y="0.5" />
+                            <point x="0.87" y="0.87" />
+                            <point x="0.5" y="0.97" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0.06" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="barra" sid="851488085438453">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582246773508856" speed="5">
+                    <frame duration="1" hotspotX="0.500637" hotspotY="0.504505" original-source="C:\Users\Toshiba\Documents\Neek Studio\barra.png">
+                        <collision-poly>
+                            <point x="0.0955414" y="0.342342" />
+                            <point x="0.905733" y="0.342342" />
+                            <point x="0.984713" y="0.504505" />
+                            <point x="0.904459" y="0.657658" />
+                            <point x="0.0968153" y="0.657658" />
+                            <point x="0.0203822" y="0.504505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hitPoints" sid="945211792409856">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="981040556497482" speed="5">
+                    <frame duration="1" hotspotX="0.013" hotspotY="0.48" original-source="C:\Users\Toshiba\Documents\Neek Studio\hp.png">
+                        <collision-poly>
+                            <point x="0.032" y="0.32" />
+                            <point x="0.968" y="0.32" />
+                            <point x="0.983" y="0.5" />
+                            <point x="0.969" y="0.69" />
+                            <point x="0.03" y="0.7" />
+                            <point x="0.016" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameOver" sid="754130286933720">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733945135919016" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Toshiba\Documents\Neek Studio\gameover.png">
+                        <collision-poly>
+                            <point x="0.0971429" y="0.226667" />
+                            <point x="0.874286" y="0.293333" />
+                            <point x="0.985714" y="0.5" />
+                            <point x="0.882857" y="0.726667" />
+                            <point x="0.131429" y="0.693333" />
+                            <point x="0.0857143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
