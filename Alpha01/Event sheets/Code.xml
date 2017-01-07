@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Code</name>
     <events>
+        <variable constant="0" name="flechas" sid="830617746306816" static="0" type="number">10</variable>
+        <variable constant="0" name="fuerzaFlecha" sid="451075373915090" static="0" type="number">0</variable>
         <variable constant="0" name="Control_Inventario" sid="490061167551598" static="0" type="number">0</variable>
         <event-group description="Estos son los eventos principales del juego" sid="722699098184943" title="Eventos del Sistema ">
             <sub-events>
@@ -81,11 +83,122 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="554418330500688">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="772967182356483" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
+        <event-group description="Aquí van las acciones del heroe" sid="537998112998138" title="Eventos Heroe">
+            <sub-events>
+                <event-group description="" sid="265630902877131" title="Arco y Flecha">
+                    <sub-events>
+                        <event-block sid="821621848302770">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="130956546830191" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="430081356931743" type="Arco">
+                                    <param id="0" name="X">Touch.X</param>
+                                    <param id="1" name="Y">Touch.Y</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="243740804955137" type="Arco">
+                                    <param id="0" name="Object">Heroe</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="400871607897018" type="arrowTxt">
+                                    <param id="0" name="Text">&quot;Potencia:&quot;&amp;500+fuerzaFlecha&amp;newline&amp;&quot;Flechas:&quot;&amp;flechas</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="804376437272850">
+                            <conditions>
+                                <condition id="2" name="Is in touch" sid="112143667090069" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="519119887744725" type="System">
+                                    <param id="0" name="Variable">flechas</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="597455311520332" type="Arco">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="886457149322431">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is in touch" sid="591160832775818" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="991989548378974" type="Arco">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="219160355942961">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="159170188083739" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="795517557182054" type="System">
+                                    <param id="0" name="Variable">flechas</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="968288711165074" type="Touch">
+                                    <param id="0" name="Object">b_inventario</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="295874029857397" type="Touch">
+                                    <param id="0" name="Object">Sprite7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="411365379643817" type="Arco">
+                                    <param id="0" name="Object">Flechas</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Bullet" id="2" name="Set gravity" sid="737110656070903" type="Flechas">
+                                    <param id="0" name="Gravity">1500</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="772218806750042" type="Flechas">
+                                    <param id="0" name="Speed">500+fuerzaFlecha</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="997407107938401" type="System">
+                                    <param id="0" name="Variable">fuerzaFlecha</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="840862283322492" type="System">
+                                    <param id="0" name="Variable">flechas</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="416816497230655" type="Flechas">
+                                    <param id="0" name="Angle">Arco.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="864982133910438">
+                            <conditions>
+                                <condition id="2" name="Is in touch" sid="334981361987734" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="586727335404806" type="System">
+                                    <param id="0" name="Variable">fuerzaFlecha</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">1000</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="513917192518832">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="484179417877922" type="System">
+                                            <param id="0" name="Interval (seconds)">0.05</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="457083102285656" type="System">
+                                            <param id="0" name="Variable">fuerzaFlecha</param>
+                                            <param id="1" name="Value">50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

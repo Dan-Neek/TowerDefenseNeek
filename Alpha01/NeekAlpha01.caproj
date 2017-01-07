@@ -11,9 +11,11 @@
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
     </used-behaviors>
     <used-effects />
@@ -80,18 +82,20 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="322039199848928">
+        <object-type name="Heroe" sid="322039199848928">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="191496107823826" speed="5">
-                    <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\mario.gonzalezs\Desktop\Daniel\Dany\Neek\Graphics\Alpha01\Warrior_Alpha01.png" />
+                    <frame duration="1" hotspotX="0.506849" hotspotY="0.5" original-source="C:\Users\mario.gonzalezs\Desktop\Daniel\Dany\Neek\Graphics\Alpha01\Warrior_Alpha01.png">
+                        <image-point name="Imagepoint 1" x="0.835616" y="0.516667" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Touch" sid="339101299757913">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="Sprite5" sid="261632882119859">
+        <object-type name="Arco" sid="261632882119859">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645124454208365" speed="5">
@@ -100,8 +104,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite6" sid="465753142966976">
+        <object-type name="Flechas" sid="465753142966976">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="592955600055827">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="646917001548248" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.517241" original-source="C:\Users\mario.gonzalezs\Desktop\Daniel\Dany\Neek\Graphics\Alpha01\Arrow.png" />
@@ -180,6 +189,9 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="arrowTxt" sid="172872252666099">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
